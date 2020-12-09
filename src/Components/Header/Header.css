@@ -1,0 +1,104 @@
+.headerMain > div{
+    display: flex;
+}
+
+.headerMain{
+    background-color: #131921;
+    height: 60px;
+}
+
+.headerLogo {
+    width: 135px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 100px;
+}
+
+.headerLogo img{
+    width: 100%;
+}
+
+.headerSearchBar{
+    margin: 12px 0 8px 0;
+    display: flex;
+    width: 845px;
+    height: 37px !important;
+}
+
+.headerCatagoriesBtn{
+    padding: 7px 0;
+    border-radius: 4px 0 0 4px;
+    width: 100%;
+    cursor: pointer;
+    border: 0;
+    border-right: 1px solid #a3a3a3;
+}
+
+.headerSearchInput{
+    padding: 9px 10px;
+    font-size: 16px;
+    outline: none !important;
+    border: none;
+    width: 100%;
+}
+
+.headerSearchBtn{
+    background: #FF9900;
+    border: none;
+    padding: 0 12px;
+    color: #fff;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.headerSearchBtn img{
+    width: 25px;
+}
+
+.headerCatagoriesBtn:focus{
+    box-shadow: 0 0 2px 4px #FF9900;
+}
+.headerSearchInput:focus{
+    box-shadow: 0 0 2px 4px #FF9900;
+}
+.headerSearchBtn:focus{
+    box-shadow: 0 0 2px 4px #FF9900;
+}
+
+.headerSignIn a{
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    margin-top: 15px;
+    margin-left: 70px;
+    display: block;
+}
+
+.headerSignIn a:hover{
+    color: #FF9900;
+}
+
+.headerCart{
+    color: #fff;
+    cursor: pointer;
+    margin: 13px 0 0 65px;
+    position: relative;
+}
+
+.cartItemsCount{
+    color: #FF9900;
+    font-size: 18px;
+    position: absolute;
+    left: 12px;
+    top: 2px;
+}
+
+.carousel-control-prev svg{
+    margin-top: -250px !important;
+    color: #222222;
+}
+
+.carousel-control-next svg{
+    margin-top: -250px !important;
+    color: #222222;
+}

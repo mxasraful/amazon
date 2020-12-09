@@ -1,0 +1,47 @@
+.forms{
+    width: 320px;
+    padding: 20px;
+    border-radius: 4px;
+    border: 1px solid #7e7e7e;
+    margin: 40px auto;
+    background: #ffffff;
+}
+.forms input{
+    width: 100% !important;
+    border: 1px solid #7e7e7e;
+    border-radius: 3px;
+}
+
+.forms input:focus{
+    box-shadow: 0 0 5px 1px #FD9A15;
+}
+
+.forms button{
+    background-color: #F2C659;
+    border: 1px solid #9C7E31;
+    width: 100%;
+    border-radius: 5px;
+    height: 38px;
+    padding: 4px 30px;
+    margin-right: 20px;
+    outline: none !important;
+    margin-bottom: 10px;
+}
+
+.forms button:focus{
+    box-shadow: 0 0 5px 1px #FD9A15;
+}
+
+.fromChangerBtn{
+    display: block;
+    font-size: 22px;
+    text-align: left !important;
+    margin-top: 20px;
+    color: #545454;
+    cursor: pointer;
+}
+
+.fromChangerBtn:hover{
+    color: #FD9A15;
+    text-decoration: underline !important;
+}
