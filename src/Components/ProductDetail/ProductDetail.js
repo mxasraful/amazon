@@ -1,16 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import productz from '../../products';
 import './ProductDetail.css';
 
 const ProductDetail = () => {
 
-    const [imgForImages, setImgForImages] = useState("")
+    const [product, setProduct] = useState([])
+
+    const [imgForImages, setImgForImages] = useState([])
 
     const path = useParams()
-    const pathName = path.id;
-    const product = productz.find(pd => pd.id === pathName)
-
+    console.log(product)
+    // useEffect(() => {
+    fetch(`http://localhost:1234/${path.catagories}/${path.id}`)
+        .then(res => res.json())
+        .then(data => setProduct(data))
+    // },[])
     useEffect(() => {
         setImgForImages(product.img)
     }, [])
@@ -46,44 +50,41 @@ const ProductDetail = () => {
                         <h2>{product.title}</h2>
                         <div className="reviewAndRating">
                             <span className="rating">
-
                                 <i style={{
                                     color: ""
                                 }} class={
                                     product.rating >= 1 ?
                                         "fas fa-star" : product.rating >= 0.2 ?
-                                        "fas fa-star-half-alt" : "far fa-star"
+                                            "fas fa-star-half-alt" : "far fa-star"
                                 }></i>
                                 <i style={{
                                     color: ""
                                 }} class={
                                     product.rating >= 2 ?
                                         "fas fa-star" : product.rating >= 1.2 ?
-                                        "fas fa-star-half-alt" : "far fa-star"
+                                            "fas fa-star-half-alt" : "far fa-star"
                                 }></i>
                                 <i style={{
                                     color: ""
                                 }} class={
                                     product.rating >= 3 ?
                                         "fas fa-star" : product.rating >= 2.2 ?
-                                        "fas fa-star-half-alt" : "far fa-star"
+                                            "fas fa-star-half-alt" : "far fa-star"
                                 }></i>
                                 <i style={{
                                     color: ""
                                 }} class={
                                     product.rating >= 4 ?
                                         "fas fa-star" : product.rating >= 3.2 ?
-                                        "fas fa-star-half-alt" : "far fa-star"
+                                            "fas fa-star-half-alt" : "far fa-star"
                                 }></i>
                                 <i style={{
                                     color: ""
                                 }} class={
                                     product.rating >= 5 ?
                                         "fas fa-star" : product.rating >= 4.2 ?
-                                        "fas fa-star-half-alt" : "far fa-star"
+                                            "fas fa-star-half-alt" : "far fa-star"
                                 }></i>
-
-
                             </span>
                             <span> {product.numOfReviews} Reviews</span>
                         </div>

@@ -25,15 +25,6 @@
     height: 37px !important;
 }
 
-.headerCatagoriesBtn{
-    padding: 7px 0;
-    border-radius: 4px 0 0 4px;
-    width: 100%;
-    cursor: pointer;
-    border: 0;
-    border-right: 1px solid #a3a3a3;
-}
-
 .headerSearchInput{
     padding: 9px 10px;
     font-size: 16px;
@@ -55,9 +46,6 @@
     width: 25px;
 }
 
-.headerCatagoriesBtn:focus{
-    box-shadow: 0 0 2px 4px #FF9900;
-}
 .headerSearchInput:focus{
     box-shadow: 0 0 2px 4px #FF9900;
 }

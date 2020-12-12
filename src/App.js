@@ -9,25 +9,25 @@ import Banner from './Components/Banner/Banner';
 import Products from './Components/Products/Products';
 import ProductDetail from './Components/ProductDetail/ProductDetail';
 import Login from './Components/Login/Login';
+import Cart from './Components/Cart/Cart';
 
 function App() {
   return (
     <div className="App">
       <Router>
+        <Header />
         <Switch>
           <Route path="/login">
-            <Login/>
+            <Login />
           </Route>
-          <Route path="/topics">
-
+          <Route path="/cart">
+            <Cart />
           </Route>
           <Route exact path="/">
-            <Header />
             <Banner />
             <Products />
           </Route>
           <Route exact path="/product/:catagories/:id">
-            <Header />
             <ProductDetail />
           </Route>
           <Route path="*">

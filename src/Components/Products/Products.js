@@ -1,11 +1,16 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import productz from '../../products';
+import React, { useEffect, useState } from 'react';
 import './Products.css'
 
 const Products = () => {
 
-    console.log(productz)
+    const [productz , setProductz] = useState([])
+
+    useEffect(() => {
+        fetch('http://localhost:1234/products')
+            .then(res => res.json())
+            .then(data => setProductz(data))
+    },[])
+
     return (
         <section className="productsMain">
             <div className="containerMain">
